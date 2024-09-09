@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Counter</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-size: 5em;
+            font-family: Arial, sans-serif;
+        }
+        #number {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="number">0</div>
+    <script>
+        let number = 0;
+        const numberElement = document.getElementById('number');
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowDown') {
+                number--;
+            } else if (event.key === 'ArrowUp') {
+                number++;
+            }
+            numberElement.textContent = number;
+        });
+    </script>
+</body>
+</html>
